@@ -1,21 +1,23 @@
 <template>
   <div  class="VueToNuxtheader">
   
-<section>
+<section style="background:#0000007a;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg  navigation">
 					<a class="navbar-brand" href="index.html">
-						<img src="~/assets/images/logo.png" alt="">
+						<img src="~/assets/images/logo.png" alt="" id="mainLogo" >
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+					<button class="navbar-toggler"
+					style="background:black;"
+					 type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars" style="color:white;"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav ">
 							<li class="nav-item active">
-								<a class="nav-link" href="index.html">Home</a>
+								<a class="nav-link" href="/">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="dashboard.html">Dashboard</a>
@@ -50,10 +52,10 @@
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
 							<li class="nav-item">
-								<a class="nav-link login-button" href="index.html">Login</a>
+								<a class="nav-link add-button" style="background:emerland;" href="/login"><i class="fa fa-user"></i> Login</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link add-button" href="#"><i class="fa fa-plus-circle"></i> Add Listing</a>
+								<a class="nav-link add-button" style="background:orange;" href="#"><i class="fa fa-plus-circle"></i> OFFER</a>
 							</li>
 						</ul>
 					</div>
@@ -67,5 +69,19 @@
 </template>
 
 <style>
+.main-nav .nav-link{
+	color:white;
+}
+.main-nav .nav-item.active .nav-link{
+	color:#020204!important;
+}
+#mainLogo{
+	height:40px;
+}
+@media (max-width: 480px) {
+  #mainLogo{
+	  height:30px;
+  }
+}
 
 </style>
