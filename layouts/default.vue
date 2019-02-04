@@ -1,8 +1,25 @@
 <template>
   <div>
+
+    <pagehead/>
     <nuxt />
+    <pagefoot />
+    
+
   </div>
 </template>
+
+<script>
+import pagehead from '~/components/pagehead.vue'
+import pagefoot from '~/components/pagefoot.vue'
+
+export default {
+  components: {
+    pagehead,
+    pagefoot
+  }
+}
+</script>
 
 <style>
 @import "~/assets/main.css";
