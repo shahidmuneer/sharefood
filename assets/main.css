@@ -825,14 +825,14 @@ ul.pagination .active a {
 }
 
 .hero-area .content-block {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 
 .hero-area .advance-search {
   background: #fff;
-  padding: 40px 30px;
+  padding: 18px 18px;
   border-radius: 3px;
-  margin-bottom: -50px;
+  margin-bottom:30px;
   box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.12);
 }
 
