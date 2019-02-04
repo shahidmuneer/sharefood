@@ -31,6 +31,8 @@
     </div> <!-- form-group// -->      
     <p class="text-center"> Don't have an account? <a href="/register">Sign Up</a> </p>                                                                 
 </form>
+
+    <p class="text-center">  By tapping "Login" you are agree to our<a href="/privacy"> T&C</a> and our <a href="/privacy">Privacy Policy.</a> </p>   
 </article>
 </div> <!-- card.// -->   
         </div>
