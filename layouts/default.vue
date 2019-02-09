@@ -2,6 +2,7 @@
   <div>
 
     <pagehead/>
+
     <nuxt />
     <pagefoot />
     
@@ -12,12 +13,14 @@
 <script>
 import pagehead from '~/components/pagehead.vue'
 import pagefoot from '~/components/pagefoot.vue'
-
+// Import component
 export default {
+   
+      
   components: {
     pagehead,
     pagefoot
-  },
+        },
   mounted(){
 	  this.$nextTick(() => {
       this.$nuxt.$loading.start()
@@ -25,6 +28,9 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 500)
 	})
 	
+  },
+  methods:{
+    
   }
 }
 </script>
@@ -79,7 +85,9 @@ html {
   background-color: #35495e;
 }
 
-
+.__nuxt-error-page{
+  position: inherit;
+}
 /* new style started  */
 /*# sourceMappingURL=maps/style.css.map */
 

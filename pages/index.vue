@@ -6,13 +6,13 @@
 =            Popular deals section            =
 ============================================-->
 
-<section class="popular-deals section bg-gray">
+<section  class="popular-deals section" style="background:#9fce8d;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title">
 					<h2>Trending Ads</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, magnam.</p>
+					<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, magnam.</p>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 			</div>
 			<div class="col-sm-12 col-lg-4">
 				<!-- product card -->
-<div class="product-item bg-light">
+<div class="product-item ">
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
@@ -141,7 +141,7 @@
 =            All Category Section            =
 ===========================================-->
 
-<section class=" section">
+<section class=" section all-categories" >
 	<!-- Container Start -->
 	<div class="container">
 		<div class="row">
@@ -318,5 +318,16 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+.all-categories{
+	background:black;
+	
+}
+.all-categories h2,.all-categories p{
+	color:white;
+}
+.all-categories .category-block{
+	background:white;
+	color:black!important;
 }
 </style>

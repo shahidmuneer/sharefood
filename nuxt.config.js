@@ -24,7 +24,9 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {name: 'folding-cube',
+  color: 'green',
+  background: 'white'},
 
   /*
   ** Global CSS
@@ -35,8 +37,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+ plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -44,8 +45,13 @@ module.exports = {
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-      // Simple usage
-      
+    // Simple usage
+ 
+      // With options
+      ['nuxt-google-maps-module', {
+        /* module options */
+        key: 'AIzaSyB3LPtKY3ubh04GUu6QgFBSFmcOgttAU8w', // Default
+      }],
       // Passing options directly
      
   ],
@@ -60,5 +66,9 @@ module.exports = {
     extend(config, ctx) {
       
     }
+  },
+  env: {
+    baseUrl:"http://fatshares.com/API/1.0"
   }
+
 }

@@ -1,6 +1,6 @@
 <template>
   <div >
-  
+
 <section class="hero-area bg-1 text-center overly">
 	<!-- Container Start -->
 	<div class="container">
@@ -109,6 +109,7 @@ export default{
 			
 		};
 	}
+	
 }
 
 </script>

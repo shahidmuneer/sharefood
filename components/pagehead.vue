@@ -1,7 +1,7 @@
 <template>
   <div  class="VueToNuxtheader">
   
-<section style="background:#0000007a;">
+<section style="background:#232425;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -16,43 +16,29 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav ">
-							<li class="nav-item active">
-								<a class="nav-link" href="/">Home</a>
+							<li class="nav-item ">
+								<nuxt-link class="nav-link"  to="/">Home</nuxt-link>
+								
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="dashboard.html">Dashboard</a>
+								<nuxt-link class="nav-link"  v-if="$store.state.auth"   to="/dashboard">Dashboard</nuxt-link>
+								
 							</li>
-							<li class="nav-item dropdown dropdown-slide">
-								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Pages <span><i class="fa fa-angle-down"></i></span>
-								</a>
-								<!-- Dropdown list -->
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="category.html">Category</a>
-									<a class="dropdown-item" href="single.html">Single Page</a>
-									<a class="dropdown-item" href="store-single.html">Store Single</a>
-									<a class="dropdown-item" href="dashboard.html">Dashboard</a>
-									<a class="dropdown-item" href="user-profile.html">User Profile</a>
-									<a class="dropdown-item" href="submit-coupon.html">Submit Coupon</a>
-									<a class="dropdown-item" href="blog.html">Blog</a>
-									<a class="dropdown-item" href="single-blog.html">Single Post</a>
-								</div>
+							<li class="nav-item">
+								<nuxt-link class="nav-link" 
+								   to="/about">About</nuxt-link>
+								
 							</li>
-							<li class="nav-item dropdown dropdown-slide">
-								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Listing <span><i class="fa fa-angle-down"></i></span>
-								</a>
-								<!-- Dropdown list -->
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
+							<li class="nav-item">
+								<nuxt-link class="nav-link" 
+								   to="/contact">Contact Us</nuxt-link>
+								
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
 							<li class="nav-item">
-								<a class="nav-link add-button" style="background:emerland;" href="/login"><i class="fa fa-user"></i> Login</a>
+							<a class="nav-link add-button" v-if="$store.state.auth" href="#" style="background:emerland;" @click="logout"><i class="fa fa-sign-out "></i> Logout</a>
+							<nuxt-link class="nav-link add-button" v-if="!$store.state.auth"  style="background:emerland;"   to="/login"><i class="fa fa-user"></i> Login</nuxt-link>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link add-button" style="background:orange;" href="#"><i class="fa fa-plus-circle"></i> OFFER</a>
@@ -68,6 +54,19 @@
   </div>
 </template>
 
+<script>
+
+const Cookie = process.client ? require('js-cookie') : undefined
+export default{
+	methods:{
+		logout(){
+ Cookie.remove('auth')
+	  this.$store.commit('setAuth', null,"")
+	     this.$router.push('/login')
+		}
+	}
+}
+</script>
 <style>
 .main-nav .nav-link{
 	color:white;
